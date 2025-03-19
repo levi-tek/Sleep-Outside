@@ -1,9 +1,9 @@
-import { getLocalStorage } from "./utils.mjs";
+import { getLocalStorage } from './utils.mjs';
 
 function renderCartContents() {
-  const cartItems = getLocalStorage("so-cart");
+  const cartItems = getLocalStorage('so-cart');
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
-  document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  document.querySelector('.product-list').innerHTML = htmlItems.join('');
 }
 
 function cartItemTemplate(item) {
@@ -25,4 +25,10 @@ function cartItemTemplate(item) {
   return newItem;
 }
 
+function calculateTotal() {
+  const cartItems = getLocalStorage('so-cart');
+  const total = cartItems.reduce((acc, item) => acc + item.FinalPrice, 0);
+  document.querySelector('.cart-total').textContent = `Totall: $${total}`;
+}
 renderCartContents();
+calculateTotal();
