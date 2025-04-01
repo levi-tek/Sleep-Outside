@@ -59,7 +59,46 @@
     <main class="divider">
       <section class="products">
         <h2>Review & Place your Order</h2>
+        <p>
+          <strong id="Subtotal">Subtotal = </strong>
+          <br />
+          <strong id="tax">Tax = </strong>
+          <br>
+          <strong id="shipping est">Shipping Estimate = </strong> <br>
+          <strong id="total">Total = </strong>
+
+        </p>
       </section>
+      <form action="">
+        <label for="name">Firt Name
+          <input type="text" id="name" placeholder="Name" required />
+        </label>
+        <label for="name">Last Name
+          <input type="text" id="name" placeholder="Name" required />
+        </label>
+        <label for="address">Address
+          <input type="text" id="address" placeholder="Address" required />
+        </label>
+        <label for="city">City
+          <input type="text" id="city" placeholder="City" required />
+        </label>
+        <label for="state">State
+          <input type="text" id="state" placeholder="State" required />
+        </label>
+        <label for="zip">Zip Code
+          <input type="text" id="zip" placeholder="Zip Code" required />
+        </label>
+        <label for="creditCard">Credit Card Number
+          <input type="text" id="creditCard" placeholder="Credit Card Number" required />
+        </label>
+        <label for="exp">Expiration Date
+          <input type="text" max="2" id="exp" placeholder="MM/YY" required />
+        </label>
+        <label for="cvv">CVV
+          <input type="text" max="3" id="cvv" placeholder="CVV" required />
+        </label>
+        <button type="submit">Checkout</button>
+      </form>
     </main>
 
     <footer>&copy;NOT a real business</footer>

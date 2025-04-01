@@ -28,7 +28,7 @@ function cartItemTemplate(item) {
 function calculateTotal() {
   const cartItems = getLocalStorage('so-cart');
   const total = cartItems.reduce((acc, item) => acc + item.FinalPrice, 0);
-  document.querySelector('.cart-total').textContent = `Totall: $${total}`;
+  document.querySelector('.cart-total').textContent = `Total: $${total}`;
 }
 renderCartContents();
 calculateTotal();
